@@ -1,7 +1,41 @@
+/* signika-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Signika';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/signika-v25-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* signika-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Signika';
+  font-style: normal;
+  font-weight: 500;
+  src: url('fonts/signika-v25-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* lato-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/lato-v24-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* lato-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/lato-v24-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
 :root {
-    --primary-color: #1F2B1C;
-    --secondary-color: #B2CB9E;
-    --tertiary-color: #AAEADE;
+    --primary-color: #ECC9B0;
+    --secondary-color: #6C4235;
 
     --bg-primary-color: #6C4235;
     --bg-secondary-color: #E8BC9D;
@@ -19,7 +53,7 @@ header {
   min-width: 100vw;
   z-index: 2;
   background: #000;
-  transition: background 0.3s ease-out, top 0.3s;
+  transition: background 0.3s ease-out, top 0.5s;
 }
 
 header[data-origin] {
@@ -42,6 +76,10 @@ header[data-hide] {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.btn-toggle-nav[aria-label="close navigation links"] .bar {
+  background: #000;
 }
 
 .btn-toggle-nav .bar {
@@ -91,10 +129,12 @@ header[data-hide] {
   position: absolute;
   top: 0;
   right: -100%;
-  background: #a97754;
+  background: rgb(255, 255, 255);
   padding: 45px 20px 20px 20px;
   opacity: 0;
   transition: right 0.4s, opacity 0.8s;
+  max-height: 100vh;
+  overflow-x: scroll;
 }
 
 #nav-main[data-display="true"] {
@@ -114,6 +154,7 @@ header[data-hide] {
 
 #nav-main > ul > li > a:not(a.link-secondary) {
   width: fit-content;
+  color: #000;
 }
   
 
@@ -165,7 +206,7 @@ a {
 .dropdown-bar {
   top: 10px;
   border-radius: 5px;
-  background: var(--bg-secondary-color);
+  background: var(--primary-color);
   position: relative;
   transform:rotateX(0);
   transition: transform 0.2s;
@@ -212,8 +253,7 @@ a {
 .link-primary,
 .link-secondary,
 .link-tertiary {
-  font-size: 14px;
-  border-radius: 10px;
+  font-size: 16px;
   padding: 15px 0;
   width: 12rem;
   text-align: center;
@@ -227,7 +267,7 @@ a {
 .link-primary {
   background: var(--primary-color);
   margin-top: 20px;
-  color: #fff;
+  color: #000;
 }
 
 .link-secondary {
@@ -239,9 +279,9 @@ a {
 
 /* customized */
 .link-tertiary {
-  background: var(--tertiary-color);
-  margin: 5rem auto 1rem auto;
-  font-weight: 500;
+  border: 2px solid var(--primary-color);
+  font-weight: 700;
+  width: 12rem;
 }
 
 .link-primary::before,
