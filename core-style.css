@@ -291,8 +291,7 @@ a {
 }
 
 .link-primary::before,
-.link-secondary::before,
-.link-tertiary::before {
+.link-secondary::before {
   content: '';
   position: absolute;
   top: 0;
