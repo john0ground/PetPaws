@@ -1,3 +1,12 @@
+/* signika-300 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Signika';
+  font-style: normal;
+  font-weight: 300;
+  src: url('fonts/signika-v25-latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
 /* signika-regular - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
@@ -52,7 +61,7 @@ header {
   top: 0;
   min-width: 100vw;
   z-index: 2;
-  background: #000;
+  background: #3f2721;
   transition: background 0.3s ease-out, top 0.5s;
 }
 
@@ -130,7 +139,7 @@ header[data-hide] {
   right: -100%;
   top: 0;
   background: rgb(255, 255, 255);
-  padding: 45px 20px 20px 20px;
+  padding: 60px 20px 20px 20px;
   transition: 
       right 0.5s, 
       border-bottom-left-radius 0.5s ease-in;
@@ -154,7 +163,7 @@ header[data-hide] {
   -webkit-tap-highlight-color: transparent;
 }
 
-#nav-main > ul > li > a:not(a.link-secondary) {
+#nav-main > ul > li > a {
   width: fit-content;
   color: #000;
 }
@@ -175,7 +184,7 @@ header[data-hide] {
   width: 100%;
 }
 
-#nav-main ul li .link-secondary:hover::after {
+#nav-main ul li .link-tertiary:hover::after {
   width: 0;
 }
 
@@ -236,16 +245,12 @@ a {
   gap: 0;
 }
 
-.dropdown-bar ul li {
-  border-radius: 10px;
-}
-
 .dropdown-bar ul li a {
   color: #000;
 }
 
 .dropdown-bar ul li:hover {
-  background: var(--secondary-color);
+  background: var(--primary-color);
 }
 
 .dropdown-bar[data-screen="desktop"] > ul li a {
@@ -255,8 +260,10 @@ a {
 .link-primary,
 .link-secondary,
 .link-tertiary {
+  font-family: "Signika", sans-serif;
   font-size: 16px;
-  padding: 15px 0;
+  font-weight: 300;
+  padding: 12px 0;
   width: 12rem;
   text-align: center;
   position: relative;
@@ -267,23 +274,20 @@ a {
 }
 
 .link-primary {
+  font-weight: 400;
   background: var(--primary-color);
-  margin-top: 20px;
   color: #000;
 }
 
 .link-secondary {
   background: var(--bg-secondary-color);
   margin-top: 10px;
-  font-weight: 500;
   color: #000;
 }
 
 /* customized */
 .link-tertiary {
   border: 2px solid var(--primary-color);
-  font-weight: 700;
-  width: 12rem;
 }
 
 .link-primary::before,
@@ -297,7 +301,7 @@ a {
   right: 0;
   z-index: -1;
   transform: scaleX(0);
-  transform-origin: left;
+  transform-origin: center;
   transition: transform 0.3s ease-in-out;
 }
 
@@ -309,16 +313,10 @@ a {
   background: var(--primary-color);
 }
 
-.link-tertiary::before {
-  background: var(--secondary-color);
-}
-
 .link-primary:hover::before,
 .link-primary:focus::before,
 .link-secondary:hover::before,
-.link-secondary:focus::before,
-.link-tertiary:hover::before,
-.link-tertiary:focus::before {
+.link-secondary:focus::before {
   transform: scaleX(1);
 }
 
@@ -329,7 +327,7 @@ a {
 
 .link-primary:hover,
 .link-primary:focus {
-  color: #000;
+  color: #fff;
 }
 
 @media screen and (min-width: 900px) {
@@ -350,6 +348,7 @@ a {
       top: 50%;
       transform: translateY(-50%);
       background: none;
+      overflow-x: visible;
     }
 
     #nav-main > ul {
@@ -363,15 +362,13 @@ a {
       white-space: nowrap;
     }
 
-    #nav-main ul li .link-secondary {
-      position: relative;
-      top: -5px;
+    #nav-main > ul > li > a {
+      color: #fff;
     }
 
     .link-primary,
-    .link-secondary,
-    .link-tertiary {
-      border-radius: 50px;
-      padding: 12px 0;
+    .link-secondary {
+      width: 11rem;
+      padding: 10px 0;
     }
 }

@@ -24,12 +24,9 @@ h1, h2 {
 }
 
 h1 {
-  font-weight: normal;
+  font-weight: 400;
   font-size: 35px;
-}
-
-a {
-  font-family: "Lato", sans-serif;
+  max-width: 42rem;
 }
 
 p {
@@ -47,6 +44,7 @@ p {
 .dropdown-bar ul li a {
   font-family: 'Signika', sans-serif;
   font-size: 18px;
+  font-weight: 300;
 }
 
 #nav-main .link-tertiary svg {
@@ -54,8 +52,22 @@ p {
   height: 24px;
 }
 
+#nav-main .link-tertiary svg path {
+  fill: #000;
+}
+
 #nav-main .link-tertiary span {
   white-space: nowrap;
+}
+
+@keyframes flutter {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(-25deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.link-tertiary.link-call:hover svg {
+  animation: flutter 0.3s 2 ease;
 }
 
 main {
@@ -98,13 +110,25 @@ main.main-loaded {
   height: 22px;
 }
 
+.hero p {
+  max-width: 37rem;
+}
+
+.hero .hero-cta {
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+  width: fit-content;
+  flex-direction: column;
+  gap: 15px;
+}
+
 .hero .link-tertiary,
 #nav-main .link-tertiary {
   display: flex;
   align-items: center;
   gap: 1rem;
   padding: 8px 28px;
-  margin-top: 15px;
 }
 
 .hero .link-tertiary svg {
@@ -140,13 +164,87 @@ main.main-loaded {
 
 
 @media screen and (min-width: 575px) {
+  header #logo {
+    margin-left: 1rem;
+  }
+
+  header .btn-toggle-nav {
+    right: 2rem;
+  }
+
+  h1 {
+    font-size: 55px;
+  }
+
   .hero {
     background-image: url("images/hero-900.webp");
+    padding: 8rem 2rem 2rem 2rem;
+  }
+
+  .hero .hero-cta {
+    flex-direction: row;
+    gap: 20px;
   }
 }
 
 @media screen and (min-width: 900px) {
+  #nav-main > ul {
+    gap: 0.7rem;
+  }
+
+  #nav-main > ul > li > a,
+  .dropdown-bar ul li a {
+    font-size: 16px;
+  }
+  
+  #nav-main .link-tertiary {
+    padding: 5px 10px;
+  }
+
+  #nav-main .link-tertiary svg path {
+    fill: #fff;
+  }
+
   .hero {
     background-image: url("images/hero-1920.webp");
+    background-color: rgba(0, 0, 0, 0);
+    padding: 8rem 5rem 0 5rem;
+    min-height: calc(100vh + 10rem);
+  }
+
+  .hero .link-tertiary {
+    width: 11rem;
+    padding: 6px 28px;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  header #logo {
+    margin-left: 2.6rem;
+  }
+
+  #nav-main > ul {
+    gap: 1.6rem;
+  }
+
+  #nav-main > ul > li > a,
+  .dropdown-bar ul li a {
+    font-size: 17px;
+  }
+
+  .hero {
+    padding: 8rem 7rem 0 7rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #nav-main {
+    padding: 0 7rem;
+  }
+
+  
+
+  .hero a#to-services svg {
+    height: 6rem;
   }
 }
