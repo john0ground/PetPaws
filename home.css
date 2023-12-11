@@ -355,11 +355,21 @@ main.main-loaded {
 svg.wreath-l {
   left: 1rem;
   transform: scaleX(-1) rotate(-45deg) translateY(3rem); 
+  transition: 0.5s ease;
 }
 
 svg.wreath-r {
   right: 1rem;
   transform: rotate(-45deg) translateY(3rem);
+  transition: 0.3s 0.1s ease;
+}
+
+.award-wrapper:hover svg.wreath-l {
+  transform: scaleX(-1) rotate(-40deg) translateY(3rem);
+}
+
+.award-wrapper:hover svg.wreath-r {
+  transform: rotate(-50deg) translateY(3rem);
 }
 
 .award-wrapper h3 {
@@ -378,6 +388,10 @@ svg.wreath-r {
 .award-wrapper p {
   text-align: left;
   margin-top: 8rem;
+}
+
+.award-wrapper:nth-child(3) p {
+  margin-top: 6.3rem;
 }
 
 .awards .link-secondary {
