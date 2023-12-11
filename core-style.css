@@ -280,9 +280,9 @@ a {
 }
 
 .link-secondary {
-  background: var(--bg-secondary-color);
+  background: var(--secondary-color);
   margin-top: 10px;
-  color: #000;
+  color: #fff;
 }
 
 /* customized */
@@ -309,7 +309,7 @@ a {
 }
 
 .link-secondary::before {
-  background: var(--primary-color);
+  background: #fff;
 }
 
 .link-primary:hover::before,
@@ -321,7 +321,7 @@ a {
 
 .link-secondary:hover,
 .link-secondary:focus {
-  color: white;
+  color: #000;
 }
 
 .link-primary:hover,

@@ -13,6 +13,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -70,7 +71,8 @@ p {
   100% { transform: rotate(0deg); }
 }
 
-.link-tertiary.link-call:hover svg {
+.link-tertiary.link-call:hover svg,
+.link-tertiary.link-call:focus svg  {
   animation: flutter 0.3s 2 ease;
 }
 
@@ -85,7 +87,7 @@ main.main-loaded {
 
 .hero {
   min-height: 100vh;
-  max-width: 100vw;
+  max-width: 100vw; 
   background-image: url("images/hero-575.webp");
   background-size: cover;
   background-position: center;
@@ -93,6 +95,7 @@ main.main-loaded {
   background-color: rgba(0, 0, 0, 0.3);
   background-blend-mode: multiply;
   padding: 8rem 1rem 2rem 1rem;
+  overflow-x: hidden;
 }
 
 .hero .paw-bd{
@@ -160,17 +163,39 @@ main.main-loaded {
   animation: bob 1.5s ease infinite;
 }
 
-.services h2 {
-  display: none;
+.services {
+  padding-bottom: 5rem;
+}
+
+.sr-only {
+  position:absolute;
+  left:-10000px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
 }
 
 .services .container {
   background: var(--bg-secondary-color);
+  width: 100vw;
+  max-width: 74rem;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+  margin: 0 auto;
+  padding: 5rem 0;
+  overflow: hidden;
+}
+
+.services .container .flex-wrapper {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 1.5rem;
 }
 
 .services .container .card {
   width: 300px;
-  margin: 0 auto;
   height: 415px;
   overflow: hidden;
   display: flex;
@@ -221,6 +246,10 @@ main.main-loaded {
   height: 42px;
 }
 
+.services .card:nth-child(2) .icon svg {
+  transform: translateY(-2px);
+}
+
 .services .wrapper h3,
 .services .wrapper p,
 .services .wrapper a {
@@ -268,6 +297,17 @@ h3 {
   width: 23px;
   height: 22px;
   animation: sway 1.3s infinite ease;
+}
+
+.services > .container > a {
+  margin: 5rem auto 0 auto;
+}
+
+.awards {
+  width: 100vw;
+  height: 30rem;
+  background: var(--bg-secondary-color);
+  border: 5px solid #000;
 }
 
 @media screen and (min-width: 575px) {
@@ -349,9 +389,11 @@ h3 {
     padding: 0 7rem;
   }
 
-  
-
   .hero a#to-services svg {
     height: 6rem;
+  }
+
+  .services .container {
+    transform: translateY(-4.5rem);
   }
 }
