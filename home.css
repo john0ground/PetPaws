@@ -515,9 +515,11 @@ svg.wreath-r {
 }
 
 .cta .container {
+  background: #fff;
   color: #000;
   display: grid;
   justify-items: center;
+  position: relative;
 }
 
 .cta .container h2 {
@@ -535,6 +537,12 @@ svg.wreath-r {
   width: 47px;
   height: 47px;
   margin-bottom: 2rem;
+  transition: 0.3s ease;
+}
+
+.cta .container .socials a:hover svg
+.cta .container .socials a:focus svg {
+  transform: rotate(10deg);
 }
 
 .cta .container h3 a {
@@ -549,6 +557,10 @@ svg.wreath-r {
 @media screen and (min-width: 575px) {
   h1 {
     font-size: 55px;
+  }
+
+  h2 {
+    font-size: 31px;
   }
 
   header #logo {
@@ -579,6 +591,10 @@ svg.wreath-r {
 
   .features {
     background-image: url("images/features-900.webp");
+  }
+
+  .cta .container p {
+    max-width: 25rem;
   }
 }
 
@@ -653,6 +669,50 @@ svg.wreath-r {
     margin-top: 3rem;
   }
 
+  .cta {
+    background: var(--bg-secondary-color);
+  }
+
+  .cta .container {
+    grid-template-columns: auto 1fr;
+    max-width: 1170px;
+    margin: 0 auto;
+    align-items:flex-start;
+    justify-items: flex-start;
+    column-gap: 2rem;
+    max-height: 727px;
+    overflow: hidden;
+  }
+
+  .cta .container picture {
+    grid-row: 1 / 6;
+    grid-column: 1 / 2;
+  }
+
+  .cta .container h2 {
+    margin: 6.5rem 0 2rem 0;
+  }
+
+  .cta .container p {
+    margin: 0;
+  }
+
+  .cta .container .socials {
+    margin: 1rem 0;
+  }
+
+  .cta .container .socials svg {
+    margin: 0;
+  }
+
+  .cta .container h3 {
+    margin-bottom: 6rem;
+  }
+
+  .cta .container .link-primary {
+    margin: 0;
+    margin-bottom: 15rem;
+  }
 }
 
 @media screen and (min-width: 1080px) {
@@ -671,6 +731,20 @@ svg.wreath-r {
 
   .hero {
     padding: 8rem 7rem 0 7rem;
+  }
+
+  .features {
+    padding-bottom: 12rem;
+  }
+
+  .cta {
+    padding-bottom: 3rem;
+  }
+
+  .cta .container {
+    column-gap: 7rem;
+    transform: translateY(-5rem);
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
   }
 }
 
