@@ -514,6 +514,9 @@ svg.wreath-r {
   margin: 0 auto;
 }
 
+.cta {
+  color: #000;
+}
 
 @media screen and (min-width: 575px) {
   h1 {
