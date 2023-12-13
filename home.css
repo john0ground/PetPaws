@@ -514,8 +514,36 @@ svg.wreath-r {
   margin: 0 auto;
 }
 
-.cta {
+.cta .container {
   color: #000;
+  display: grid;
+  justify-items: center;
+}
+
+.cta .container h2 {
+  margin-top: 4rem;
+  margin-bottom: 3rem;
+  color: var(--secondary-color);
+}
+
+.cta .container p {
+  max-width: 300px;
+  margin: 2rem 0;
+}
+
+.cta .container .socials svg {
+  width: 47px;
+  height: 47px;
+  margin-bottom: 2rem;
+}
+
+.cta .container h3 a {
+  color: var(--secondary-color);
+  text-decoration: underline;
+}
+
+.cta .container .link-primary {
+  margin: 3rem 0;
 }
 
 @media screen and (min-width: 575px) {
