@@ -1,9 +1,19 @@
 const imageContainers = document.querySelectorAll('.gallery .image-container');
 const imageModal = document.querySelector('#image-dialog'); 
 const imgElement = imageModal.querySelector('img');
+const loadingIcon = imageModal.querySelector('svg');
+
+function setLoadingIcon() {
+    loadingIcon.style.display = 'block';
+}
+
+function hideLoadingIcon() {
+    loadingIcon.style.display = 'none';
+}
 
 function displayImage(e) {
     imgElement.removeAttribute('src');
+    setLoadingIcon();
 
     const imageThumbnail = e.target.querySelector('img');
     const imageSrc = imageThumbnail.dataset.highres;
@@ -12,11 +22,7 @@ function displayImage(e) {
     imageModal.showModal();
 }
 
-function setLoadingIcon() {}
-
-function hideLoadingIcon() {}
-
-imgElement.addEventListener('load', () => console.log('loaded'));
+imgElement.addEventListener('load', hideLoadingIcon);
 
 imageContainers.forEach(img => {
     img.addEventListener('mouseover', () => { img.classList.add('image-hovered'); });

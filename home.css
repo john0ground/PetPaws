@@ -576,6 +576,15 @@ svg.wreath-r {
   max-width: 1170px;
   transition: gap 0.3s ease;
   cursor: pointer;
+
+  /* remove blue highlight */
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .gallery .grid-wrapper:hover {
@@ -645,7 +654,6 @@ svg.wreath-r {
   border: none;
   object-fit: cover;
   background: rgba(0, 0, 0, 0);
-  border: 1px solid #fff;
 }
 
 #image-dialog::backdrop {
@@ -655,6 +663,19 @@ svg.wreath-r {
 #image-dialog img {
   width: 100%;
   display: block;
+}
+
+@keyframes loading-rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+#image-dialog svg {
+  width: 100px;
+  height: 100px;
+  display: block;
+  margin: 0 auto;
+  animation: loading-rotate 5s infinite linear;
 }
 
 @media screen and (min-width: 575px) {
