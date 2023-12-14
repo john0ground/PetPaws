@@ -587,6 +587,10 @@ svg.wreath-r {
   position: relative;
 }
 
+.gallery .image-container * {
+  pointer-events: none;
+}
+
 .gallery .image-container svg {
   position: absolute;
   width: 4rem;
@@ -630,6 +634,27 @@ svg.wreath-r {
 .gallery a svg {
   position: absolute;
   display: none;
+}
+
+#image-dialog {
+  width: 800px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  outline: none;
+  border: none;
+  object-fit: cover;
+  background: rgba(0, 0, 0, 0);
+  border: 1px solid #fff;
+}
+
+#image-dialog::backdrop {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+#image-dialog img {
+  width: 100%;
+  display: block;
 }
 
 @media screen and (min-width: 575px) {
