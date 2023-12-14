@@ -540,7 +540,7 @@ svg.wreath-r {
   transition: 0.3s ease;
 }
 
-.cta .container .socials a:hover svg
+.cta .container .socials a:hover svg,
 .cta .container .socials a:focus svg {
   transform: rotate(10deg);
 }
@@ -552,6 +552,34 @@ svg.wreath-r {
 
 .cta .container .link-primary {
   margin: 3rem 0;
+}
+
+.gallery {
+  color: #000;
+  overflow-x: hidden;
+  padding: 4rem 20px;
+  border-top: 1px solid #000;
+}
+
+.gallery h2 {
+  text-align: center;
+}
+
+.gallery .grid-wrapper {
+  border: 1px solid green;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+  margin: 3rem auto 0 auto;
+}
+
+.gallery .grid-wrapper .image-container {
+  object-fit: cover;
+  width: 100%;
+}
+
+.gallery .grid-wrapper .image-container img {
+  width: 100%;
 }
 
 @media screen and (min-width: 575px) {
@@ -595,6 +623,11 @@ svg.wreath-r {
 
   .cta .container p {
     max-width: 25rem;
+  }
+
+  .grid-wrapper .image-container:nth-of-type(2) {
+    grid-row: 1 / 3;
+    grid-column: 2 / 3;
   }
 }
 
