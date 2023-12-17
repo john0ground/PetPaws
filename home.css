@@ -678,6 +678,10 @@ svg.wreath-r {
   animation: loading-rotate 5s infinite linear;
 }
 
+.reviews h2 {
+  color: #000;
+}
+
 .reviews .carousel {
   /* border: 1px solid green; */
 }
@@ -721,7 +725,7 @@ svg.wreath-r {
 }
 
 .reviews .carousel .card-container {
-  max-width: 100vw;
+  width: 100vw;
   position: relative;
   overflow-x: hidden;
 }
@@ -729,6 +733,9 @@ svg.wreath-r {
 .reviews .carousel .card-container ul {
   display: flex;
   list-style: none;
+  position: relative;
+  transition: left 0.5s ease;
+  left: 0;
 }
 
 .reviews .carousel .card-container li {
