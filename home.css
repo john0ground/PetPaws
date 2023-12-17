@@ -678,6 +678,71 @@ svg.wreath-r {
   animation: loading-rotate 5s infinite linear;
 }
 
+.reviews .carousel {
+  /* border: 1px solid green; */
+}
+
+.reviews .carousel {
+  position: relative;
+}
+
+.reviews .carousel .carousel-btn {
+  background: #fff;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  outline: #000;
+  z-index: 2;
+  border: none;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-btn[data-direction="left"] {
+  left: 0.5rem;
+}
+
+.carousel-btn[data-direction="right"] {
+  right: 0.5rem;
+}
+
+.reviews .carousel-btn svg {
+  pointer-events: none;
+  min-width: 55px;
+}
+
+.reviews .carousel-btn[data-direction="left"] svg {
+  transform: rotateY(180deg);
+}
+
+.reviews .carousel .card-container {
+  max-width: 100vw;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.reviews .carousel .card-container ul {
+  display: flex;
+  list-style: none;
+}
+
+.reviews .carousel .card-container li {
+  background: #935B4A;
+  padding: 2rem 3.8rem;
+  font-size: 14px;
+  text-align: left;
+  min-width: 100%;
+}
+
+.reviews .carousel li .stars {
+  width: 150px;
+}
+
 @media screen and (min-width: 575px) {
   h1 {
     font-size: 55px;
