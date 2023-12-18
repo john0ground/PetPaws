@@ -823,10 +823,6 @@ svg.wreath-r {
   user-select: none;
 }
 
-.faq-row * {
-  pointer-events: none;
-}
-
 .faq-row .question {
   display: flex;
   justify-content: space-between;
