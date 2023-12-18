@@ -795,9 +795,49 @@ svg.wreath-r {
 
 .faq {
   width: 100%;
-  height: 500px;
   background: rgba(232, 188, 157, 0.7);
+  padding: 4rem 0;
+  color: #000;
 }
+
+.faq h2 {
+  text-align: center;
+}
+
+.faq .container {
+  border: 1px solid green;
+  margin-top: 4rem;
+}
+
+.faq-row {
+  /* color: #000; */
+}
+
+.faq-row .question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-row .question div.icon {
+  border: 1px solid #000;
+  width: fit-content;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.2rem;
+}
+
+.faq-row .question div.icon svg {
+  width: 25px;
+  height: 25px;
+}
+
+.faq .link-secondary {
+  margin: 5rem auto 0 auto;
+}
+
 
 @media screen and (min-width: 575px) {
   h1 {
