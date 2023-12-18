@@ -60,7 +60,7 @@ header {
   position: fixed;
   top: 0;
   min-width: 100vw;
-  z-index: 2;
+  z-index: 3;
   background: #3f2721;
   transition: background 0.3s ease-out, top 0.5s;
 }
