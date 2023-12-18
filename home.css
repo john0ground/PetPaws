@@ -887,8 +887,15 @@ svg.wreath-r {
   transform: rotate(45deg);
 }
 
-.faq .link-secondary {
+.faq svg.down-arrow {
+  width: 22px;
+  height: 22px;
+  display: block;
   margin: 5rem auto 0 auto;
+}
+
+.faq .link-secondary {
+  margin: 2rem auto 0 auto;
 }
 
 
@@ -1229,5 +1236,16 @@ svg.wreath-r {
 
   .features {
     padding-bottom: 10rem;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .reviews-faq-flex {
+    display: flex;
+  }
+
+  .reviews-faq-flex > * {
+    flex: 1;
+    padding-bottom: 7rem;
   }
 }
