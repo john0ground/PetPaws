@@ -10,6 +10,7 @@
     <script src="gallery.js" defer></script>
     <script src="carousel.js" defer></script>
     <script src="accordion.js" defer></script>
+    <script src="form.js" defer></script>
 </head>
 <body>
     <header data-origin>
@@ -741,6 +742,99 @@
                 <a href="faq.html" class="link-secondary">More FAQs</a>
             </section>
         </div>
+
+        <!-- =============================================  CONTACT  ==================================== -->
+        <!-- =============================================  CONTACT  ==================================== -->
+
+        <section class="contact">
+            <h2>Contact Us</h2>
+            <div class="banner"></div>
+            <div class="container">
+                <form 
+                    name="contact" 
+                    method="POST" 
+                    data-netlify-recaptcha="true"
+                    data-netlify="true"
+                >
+                    <h3>Send us a message.</h3>
+                    <div class="form-input">
+                        <label for="name">Name*</label>
+                        <input 
+                            type="text" 
+                            name="name" 
+                            id="name" 
+                            pattern="[A-Za-z ]+"
+                            placeholder="Sarah Guzman" 
+                            aria-required="true" 
+                            required
+                        >
+                        <span 
+                            class="error-message"
+                            id="name-error" 
+                            aria-hidden="true"
+                        >
+                            Invalid message
+                        </span>
+                    </div>
+                    <div class="form-input">
+                        <label for="phone">Phone* <span>(Format: +63 9xxxxxxxxx)</span></label>
+                        <input 
+                            type="tel" 
+                            name="phone" 
+                            id="phone" 
+                            value="+63  "
+                            pattern="(\+63\s{2}\d{10})"
+                            maxlength="15"
+                            aria-required="true" 
+                            required
+                        >
+                        <span 
+                            class="error-message" 
+                            id="phone-error"
+                            aria-hidden="true"
+                        >
+                            Invalid message
+                        </span>
+                    </div>
+                    <div class="form-input">
+                        <label for="email">Email (optional)</label>
+                        <input 
+                            type="email" 
+                            name="email" 
+                            id="email" 
+                            placeholder="name@site.com"
+                        >
+                        <span 
+                            class="error-message" 
+                            id="email-error"
+                            aria-hidden="true"
+                        >
+                            Invalid message
+                        </span>
+                    </div>
+                    <div class="form-input">
+                        <label for="message">Message*</label>
+                        <textarea 
+                            name="message" 
+                            id="message" 
+                            cols="30" 
+                            rows="10" 
+                            placeholder="How can we help you?"
+                            aria-required="true" 
+                            required></textarea>
+                        <span 
+                            class="error-message" 
+                            id="message-error"
+                            aria-hidden="true"
+                        >
+                            Invalid message
+                        </span>
+                    </div>
+                    <div data-netlify-recaptcha="true"></div>
+                    <button class="link-primary" type="submit">Submit</button>
+                </form>
+            </div>
+        </section>
 
     </main>
 </body>
