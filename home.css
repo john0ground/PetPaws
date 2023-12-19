@@ -894,6 +894,26 @@ svg.wreath-r {
   margin: 2rem auto 0 auto;
 }
 
+.contact .container {
+  background: var(--bg-secondary-color);
+}
+
+.contact {
+  position: relative;
+}
+
+.contact h2 {
+  position: absolute;
+  left: 50%;
+  top: 75px;
+  transform: translate(-50%, -50%);
+}
+
+.contact .banner {
+  height: 150px;
+  background: var(--bg-primary-color);
+}
+
 .contact form {
   background: #fff;
   padding: 1rem 1.5rem;
@@ -968,6 +988,7 @@ form .form-input {
   font-size: 0.9rem;
   margin-top: 3px;
   visibility: visible;
+  font-family: 'Signika', sans-serif;
 }
 
 .form-input .error-message[aria-hidden="true"] {
@@ -979,6 +1000,14 @@ form button {
   border: none;
 }
 
+.contact-details {
+  color: #000;
+}
+
+.contact-details svg {
+  width: 33px;
+  height: 33px;
+}
 
 @media screen and (min-width: 575px) {
   h1 {
@@ -1032,6 +1061,19 @@ form button {
   .gallery a {
     font-size: 25px;
   }
+
+  .contact form {
+    padding: 2rem 3rem;
+}
+
+  .contact .form-input input {
+    height: 2.5rem;
+} 
+
+  .contact form button {
+    margin: 0;
+    margin-left: auto;
+}
 }
 
 @media screen and (min-width: 700px) {
