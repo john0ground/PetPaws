@@ -785,8 +785,6 @@
                             value="+63  "
                             pattern="(\+63\s{2}\d{10})"
                             maxlength="15"
-                            aria-required="true" 
-                            required
                         >
                         <span 
                             class="error-message" 
@@ -797,12 +795,14 @@
                         </span>
                     </div>
                     <div class="form-input">
-                        <label for="email">Email (optional)</label>
+                        <label for="email">Email*</label>
                         <input 
                             type="email" 
                             name="email" 
                             id="email" 
                             placeholder="name@site.com"
+                            aria-required="true" 
+                            required
                         >
                         <span 
                             class="error-message" 

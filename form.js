@@ -30,7 +30,7 @@ function verifyEmail(content) {
     const format = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (onlySpaces.test(content) || content.length === 0) {
-        result.state = 'optional'
+        result.errorMessage = 'Please enter your email';
     } else if(format.test(content)) {
         result.state = true;
     } else {
@@ -54,7 +54,7 @@ function verifyPhone(content) {
     const result = new InputStateData(false, '');
 
     if (content.length < 6) {
-        result.errorMessage = 'Please add a phone number.'
+        result.state = 'optional';
     } else if (content.length < 15) {
         result.errorMessage = 'Please enter a 10 digit number after the area code (+63).'
     } else {
