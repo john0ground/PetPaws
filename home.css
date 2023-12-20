@@ -1054,6 +1054,17 @@ form button {
   height: 350px;
 }
 
+#scroll-top-btn:hover svg{
+  transform: rotate(-90deg) translateX(5px);
+}
+
+#scroll-top-btn svg {
+  width: 40px;
+  height: auto;
+  transform: rotate(-90deg);
+  transition: 0.3s ease;
+}
+
 footer {
   overflow-x: hidden;
   max-width: 100vw;

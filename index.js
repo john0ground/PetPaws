@@ -157,6 +157,25 @@ function toggleHeaderPosition() {
 window.addEventListener('scroll', toggleHeaderBackground);
 window.addEventListener('scroll', toggleHeaderPosition);
 
+// ==================================  SCROLL TO TOP BUTTON  ======================================
+const scrollTopBtn = document.querySelector('#scroll-top-btn');
+
+function toggleScrollToTopBtn() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      scrollTopBtn.style.display = "block";
+    } else {
+      scrollTopBtn.style.display = "none";
+    }
+}
+
+function scrollToTop() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0;
+}
+
+window.addEventListener('scroll', toggleScrollToTopBtn);
+scrollTopBtn.addEventListener('click', scrollToTop);
+
 // ========================= INITIALIZE ================================
 (function init() {
     if (document.documentElement.clientWidth <= 900) {

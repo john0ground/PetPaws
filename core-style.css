@@ -345,6 +345,21 @@ a {
   color: #fff;
 }
 
+#scroll-top-btn {
+  width: 60px;
+  height: 60px;
+  background: var(--primary-color);
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: none;
+  border: none;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 5;
+}
+
 @media screen and (min-width: 900px) {
     header {
       display: flex;
@@ -385,5 +400,10 @@ a {
     .link-secondary {
       width: 11rem;
       padding: 10px 0;
+    }
+
+    #scroll-top-btn {
+      bottom: 45px;
+      right: 45px;
     }
 }
