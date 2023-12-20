@@ -895,7 +895,13 @@ svg.wreath-r {
 }
 
 .contact .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background: var(--bg-secondary-color);
+  padding: 4rem 0;
+  max-width: 1030px;
+  margin: 0 auto;
 }
 
 .contact {
@@ -1002,7 +1008,8 @@ form button {
 
 .contact-details {
   color: #000;
-  padding: 4rem 1rem;
+  margin: 4rem 1rem;
+  max-width: 470px;
 }
 
 .contact-details > p {
@@ -1030,6 +1037,12 @@ form button {
 .contact-details .socials svg {
   width: 47px;
   height: 47px;
+  transition: 0.3s ease;
+}
+
+.contact-details .socials svg:hover,
+.contact-details .socials svg:focus {
+  transform: rotate(10deg);
 }
 
 @media screen and (min-width: 575px) {
@@ -1343,6 +1356,28 @@ form button {
 
   .gallery {
     border: none;
+  }
+
+  .contact .banner {
+    height: 250px;
+  }
+
+  .contact .container {
+    flex-direction: row;
+    padding: 2rem 2.8rem;
+    gap: 4rem;
+    transform: translateY(-5rem);
+  }
+
+  .contact .container .contact-details {
+    max-width: 400px;
+    margin: 1.5rem 0;
+    align-self: flex-start;
+  }
+
+  .contact .contact-details .link-custom,
+  .contact .contact-details .socials {
+    margin-left: 3rem;
   }
 }
 
