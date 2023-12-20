@@ -259,7 +259,8 @@ a {
 
 .link-primary,
 .link-secondary,
-.link-tertiary {
+.link-tertiary,
+.link-custom {
   font-family: "Signika", sans-serif;
   font-size: 16px;
   font-weight: 300;
@@ -285,13 +286,20 @@ a {
   color: #fff;
 }
 
-/* customized */
 .link-tertiary {
   border: 2px solid var(--primary-color);
 }
 
+.link-custom {
+  margin-top: 2rem;
+  background: #fff;
+  color: #000;
+  font-weight: 400;
+}
+
 .link-primary::before,
-.link-secondary::before {
+.link-secondary::before,
+.link-custom::before {
   content: '';
   position: absolute;
   top: 0;
@@ -312,10 +320,16 @@ a {
   background: #fff;
 }
 
+.link-custom::before {
+  background: var(--secondary-color);
+}
+
 .link-primary:hover::before,
 .link-primary:focus::before,
 .link-secondary:hover::before,
-.link-secondary:focus::before {
+.link-secondary:focus::before,
+.link-custom:hover::before,
+.link-custom:focus::before {
   transform: scaleX(1);
 }
 
@@ -325,7 +339,9 @@ a {
 }
 
 .link-primary:hover,
-.link-primary:focus {
+.link-primary:focus,
+.link-custom:hover,
+.link-custom:focus {
   color: #fff;
 }
 

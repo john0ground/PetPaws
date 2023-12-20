@@ -1002,11 +1002,34 @@ form button {
 
 .contact-details {
   color: #000;
+  padding: 4rem 1rem;
+}
+
+.contact-details > p {
+  margin-bottom: 3rem;
+}
+
+.contact-details .address,
+.contact-details .schedule {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 1rem;
 }
 
 .contact-details svg {
   width: 33px;
   height: 33px;
+  min-width: fit-content;
+}
+
+.contact-details .socials {
+  margin-top: 2rem;
+}
+
+.contact-details .socials svg {
+  width: 47px;
+  height: 47px;
 }
 
 @media screen and (min-width: 575px) {
