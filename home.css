@@ -1054,6 +1054,81 @@ form button {
   height: 350px;
 }
 
+footer {
+  overflow-x: hidden;
+  max-width: 100vw;
+  background-image: url("images/features-575.webp");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-color: rgba(0, 0, 0, 0.3);
+  background-blend-mode: multiply;
+}
+
+footer .footer-content {
+  padding: 5rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.footer-content .flex-column {
+  max-width: 350px;
+}
+
+.footer-content .flex-column ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer-content .flex-column:first-child {
+  transform: translateY(-3.7rem);
+}
+
+.footer-content .logo {
+  transform: translate(-1.1rem, 0.7rem);
+}
+
+.footer-content .logo svg {
+  width: 232px;
+  height: 102px;
+}
+
+.footer-content ul li,
+.footer-content ul li a,
+.footer-content ul li p,
+.copyright  {
+  font-size: 18px;
+  font-family: 'Signika', sans-serif;
+  font-weight: 300;
+}
+
+.footer-content h3 {
+  margin-bottom: 2rem;
+}
+
+.footer-content .socials a {
+  margin-right: 0.5rem;
+}
+
+.footer-content svg {
+  width: 24px;
+  height: 24px;
+}
+
+footer .copyright {
+  background: var(--bg-primary-color);
+  padding: 1rem;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+footer .copyright a {
+  text-decoration: underline;
+  color: rgba(255, 255, 255, 0.7);
+}
 
 @media screen and (min-width: 575px) {
   h1 {
@@ -1091,7 +1166,8 @@ form button {
     background-image: url("images/dogs-bg-900.webp");
   }
 
-  .features {
+  .features,
+  footer {
     background-image: url("images/features-900.webp");
   }
 
@@ -1120,6 +1196,11 @@ form button {
     margin: 0;
     margin-left: auto;
 }
+
+  footer .footer-content {
+    padding: 5rem 3rem;
+    gap: 6rem;
+  }
 }
 
 @media screen and (min-width: 700px) {
@@ -1239,7 +1320,8 @@ form button {
     margin-top: 0;
   }
 
-  .features {
+  .features,
+  footer {
     background-image: url("images/features-1920.webp");
   }
 
@@ -1329,6 +1411,14 @@ form button {
 
   .gallery a:hover svg {
     animation: arrow-motion 1s ease infinite;
+  }
+
+  footer .footer-content {
+    padding: 5rem 7rem 3rem 7rem;
+  }
+
+  footer .copyright {
+    padding: 2rem 0;
   }
 }
 
