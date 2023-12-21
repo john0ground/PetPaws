@@ -96,7 +96,7 @@ main.main-loaded {
 .hero {
   min-height: 100vh;
   max-width: 100vw; 
-  background-image: url("images/hero-575.webp");
+  background-image: url("../images/hero-575.webp");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -324,7 +324,7 @@ main.main-loaded {
 .awards {
   padding: 4rem 0;
   max-width: 100vw; 
-  background-image: url("images/dogs-bg-575.webp");
+  background-image: url("../images/dogs-bg-575.webp");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -468,7 +468,7 @@ svg.wreath-r {
   padding: 5rem 0;
   overflow-x: hidden;
   max-width: 100vw;
-  background-image: url("images/features-575.webp");
+  background-image: url("../images/features-575.webp");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -680,7 +680,7 @@ svg.wreath-r {
 
 .reviews-faq-flex {
   max-width: 100vw; 
-  background-image: url("images/dogs-bg-575.webp");
+  background-image: url("../images/dogs-bg-575.webp");
   background-size: cover;
   background-position: top;
   background-attachment: fixed;
@@ -1068,7 +1068,7 @@ form button {
 footer {
   overflow-x: hidden;
   max-width: 100vw;
-  background-image: url("images/features-575.webp");
+  background-image: url("../images/features-575.webp");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -1159,7 +1159,7 @@ footer .copyright a {
   }
 
   .hero {
-    background-image: url("images/hero-900.webp");
+    background-image: url("../images/hero-900.webp");
     padding: 8rem 2rem 2rem 2rem;
   }
 
@@ -1174,12 +1174,12 @@ footer .copyright a {
 
   .awards,
   .reviews-faq-flex {
-    background-image: url("images/dogs-bg-900.webp");
+    background-image: url("../images/dogs-bg-900.webp");
   }
 
   .features,
   footer {
-    background-image: url("images/features-900.webp");
+    background-image: url("../images/features-900.webp");
   }
 
   .cta .container p {
@@ -1290,7 +1290,7 @@ footer .copyright a {
   }
 
   .hero {
-    background-image: url("images/hero-1920.webp");
+    background-image: url("../images/hero-1920.webp");
     background-color: rgba(0, 0, 0, 0);
     padding: 8rem 5rem 0 5rem;
     min-height: calc(100vh + 10rem);
@@ -1307,7 +1307,7 @@ footer .copyright a {
 
   .awards,
   .reviews-faq-flex {
-    background-image: url("images/dogs-bg-1920.webp");
+    background-image: url("../images/dogs-bg-1920.webp");
   }
 
   .team .manager {
@@ -1333,7 +1333,7 @@ footer .copyright a {
 
   .features,
   footer {
-    background-image: url("images/features-1920.webp");
+    background-image: url("../images/features-1920.webp");
   }
 
   .features .flex-wrapper {
