@@ -229,6 +229,8 @@ main.main-loaded {
 
 .services .card img {
   display: block;
+  width: 300px;
+  height: 200px;
 }
 
 .services .card .wrapper {
@@ -432,6 +434,7 @@ svg.wreath-r {
 
 .manager img {
   width: 300px;
+  height: 450px;
   margin-bottom: 2rem;
 }
 
